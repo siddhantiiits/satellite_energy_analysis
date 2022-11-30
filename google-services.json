@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316065203658",
+    "project_id": "brames-3cf3b",
+    "storage_bucket": "brames-3cf3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316065203658:android:1bbada2857617369057b33",
+        "android_client_info": {
+          "package_name": "com.ex.pp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316065203658-pt2t1nji37lmokbrkmq91i5l7m0l1fj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXd4G5oG9cRW-PxJiIOH81MLM-9jtikjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316065203658-pt2t1nji37lmokbrkmq91i5l7m0l1fj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
