@@ -1,14 +1,20 @@
-import math
-import numpy as np
-from scipy.stats import beta
+import pytesseract
+from PIL import Image
 import cv2
-from matplotlib import pyplot as plt
-from gridding import draw_grid
+import urllib
+import urllib.request
+import numpy as np
 
-im = cv2.imread('Satellite Images/London/overlayedimg.jpg')
-font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(im, 'Superimposed Analysis', (0,0), font, 3, (0, 0, 255), 2, cv2.LINE_AA)
-cv2.imwrite('anotated.jpg',im)
-cv2.imshow('image', im)
+pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/5.3.0/bin/tesseract'
+img = Image.open('test.jpeg')
+image = np.asarray(img, dtype="uint8")
+image = cv2.imdecode(image, cv2.IMREAD_COLOR)
+retval, img = cv2.threshold(img,200,255, cv2.THRESH_BINARY)
+img = cv2.resize(img,(0,0),fx=3,fy=3)
+img = cv2.GaussianBlur(img,(11,11),0)
+img = cv2.medianBlur(img,9)
+cv2.imshow('asd',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+txt = pytesseract.image_to_string(img)
+print('recognition:', txt)
